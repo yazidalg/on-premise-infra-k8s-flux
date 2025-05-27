@@ -1,0 +1,17 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: flux-system
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/yazidalg/on-premise-infra-k8s-flux
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  ignore: |
+    # exclude all
+    /*
+    # include only our cluster path
+    !/clusters/kubernetes-admin@kubernetes/
