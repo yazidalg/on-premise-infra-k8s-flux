@@ -10,8 +10,3 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  ignore: |
-    # exclude all
-    /*
-    # include only our cluster path
-    !/clusters/kubernetes-admin@kubernetes/
