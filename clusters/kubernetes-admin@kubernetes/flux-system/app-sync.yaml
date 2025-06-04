@@ -10,5 +10,5 @@ spec:
   prune: true # Hapus resource di klaster yang tidak lagi ada di Git
   sourceRef:
     kind: GitRepository
-    name: on-premise-infra-k8s-flux
+    name: flux-system
     namespace: flux-system # Namespace dari GitRepository
