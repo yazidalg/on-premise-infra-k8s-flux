@@ -1,13 +1,17 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
+apiVersion: source.toolkit.fluxcd.io/v1Add commentMore actions
+kind: GitRepository
 metadata:
-  name: onprem-deploy
+  name: flux-system
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./clusters/kubernetes-admin@kubernetes"
-  prune: true
-  sourceRef:
-    kind: GitRepository
+  url: https://github.com/yazidalg/on-premise-infra-k8s-flux
+  ref:
+    branch: main
+  secretRef:
     name: flux-system
-  timeout: 2m
+  ignore: |
+    # exclude all
+    /*
+    # include only our cluster path
+    !/clusters/kubernetes-admin@kubernetes/
