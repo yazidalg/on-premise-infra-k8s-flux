@@ -7,7 +7,8 @@ spec:
   interval: 5m # Seberapa sering FluxCD mencoba rekonsiliasi
   chart:
     spec:
-      path: on-premise-infra-k8s-flux/motion-chart
+      chart: motion-chart # Path relatif dari akar repo ke direktori chart dasar
+      version: 0.1.0 
       sourceRef:
         kind: GitRepository
         name: flux-system # Nama GitRepository yang didefinisikan di apps/git-repository.yaml
