@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system  # Harus di namespace tempat FluxCD diinstal
 spec:
   interval: 1m # Seberapa sering Kustomization ini disinkronkan
-  path: "./clusters/kubernetes-admin@kubernetes/apps/kustomization.yaml" # Path di Git repo ke kustomization.yaml yang akan diproses
+  path: "./clusters/kubernetes-admin@kubernetes/apps" # Path di Git repo ke kustomization.yaml yang akan diproses
   prune: true # Hapus resource di klaster yang tidak lagi ada di Git
   sourceRef:
     kind: GitRepository
