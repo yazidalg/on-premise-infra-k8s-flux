@@ -15,5 +15,5 @@ spec:
       interval: 1m # Seberapa sering mengecek update chart dari source
   valuesFrom:
     - kind: ConfigMap
-      name: lidm-api-values # Nama ConfigMap yang dibuat Kustomize
+      name: values.yaml # Nama ConfigMap yang dibuat Kustomize
       # valuesKey: values.yaml # Opsional, defaultnya 'values.yaml' jika key di ConfigMap adalah 'values.yaml'
