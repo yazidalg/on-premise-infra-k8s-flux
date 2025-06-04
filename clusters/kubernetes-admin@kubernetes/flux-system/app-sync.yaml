@@ -1,0 +1,14 @@
+# clusters/kubernetes-admin@kubernetes/flux-system/apps-sync.yaml
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: sync-my-apps       # Nama Kustomization resource ini
+  namespace: flux-system  # Harus di namespace tempat FluxCD diinstal
+spec:
+  interval: 1m # Seberapa sering Kustomization ini disinkronkan
+  path: "./clusters/kubernetes-admin@kubernetes/apps" # Path di Git repo ke kustomization.yaml yang akan diproses
+  prune: true # Hapus resource di klaster yang tidak lagi ada di Git
+  sourceRef:
+    kind: GitRepository
+    name: on-premise-infra # Nama GitRepository yang akan digunakan
+    namespace: flux-system # Namespace dari GitRepository
