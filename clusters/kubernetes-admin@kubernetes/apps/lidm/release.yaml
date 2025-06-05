@@ -16,4 +16,5 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: lidm-values # Nama ConfigMap yang dibuat Kustomize
+      valuesKey: lidm-values.yaml
       # valuesKey: values.yaml # Opsional, defaultnya 'values.yaml' jika key di ConfigMap adalah 'values.yaml'
