@@ -3,12 +3,12 @@ entries:
   motion-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-06-05T01:58:31.085301+07:00"
+    created: "2025-06-05T08:02:36.020739+07:00"
     description: A Helm chart for Kubernetes
-    digest: ba3f6ecf7a3d729a97c08cb2c6638504d8c84e2a73bb229419838014581bf2c2
+    digest: 7ccd1bdadfd6751af10d17c4234b469d4f8e006ef360c4c0716ce469858bda55
     name: motion-chart
     type: application
     urls:
     - motion-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-05T01:58:31.084863+07:00"
+generated: "2025-06-05T08:02:36.020325+07:00"
