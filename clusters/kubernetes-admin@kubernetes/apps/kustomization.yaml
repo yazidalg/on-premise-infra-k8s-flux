@@ -6,6 +6,7 @@ kind: Kustomization
 # namespace: default 
 
 resources:
+  - ./git-repository.yaml
   - ./lidm/release.yaml
   # Tambahkan referensi ke HelmRelease instans lain di sini
 

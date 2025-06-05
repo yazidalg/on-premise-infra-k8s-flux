@@ -1,16 +1,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: lidm-api # Nama HelmRelease resource
-  namespace: lidm     # Namespace tempat HelmRelease ini dibuat (dan tempat app di-deploy)
+  name: lidm-api
+  namespace: lidm
 spec:
-  interval: 5m # Seberapa sering FluxCD mencoba rekonsiliasi
+  interval: 5m
   chart:
     spec:
-      chart: motion-chart # Path relatif dari akar repo ke direktori chart dasar
+      chart: motion-chart
       sourceRef:
         kind: GitRepository
-        name: flux-system # Nama GitRepository yang didefinisikan di apps/git-repository.yaml
+        name: flux-system
         namespace: flux-system
       interval: 1m # Seberapa sering mengecek update chart dari source
   valuesFrom:
