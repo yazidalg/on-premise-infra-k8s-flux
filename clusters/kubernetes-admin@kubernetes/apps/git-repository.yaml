@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/yazidalg/on-premise-infra-k8s-flux
+  url: https://github.com/yazidalg/on-premise-infra-k8s-flux.git
   ref:
     branch: main
   secretRef:
