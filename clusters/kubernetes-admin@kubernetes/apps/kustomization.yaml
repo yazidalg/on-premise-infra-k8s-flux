@@ -16,3 +16,5 @@ configMapGenerator:
   namespace: lidm
   files:
     - values.yaml=./values/lidm-values.yaml
+  options:
+    disableNameSuffixHash: true
