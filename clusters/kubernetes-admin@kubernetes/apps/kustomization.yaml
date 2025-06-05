@@ -15,6 +15,6 @@ configMapGenerator:
 - name: lidm-values
   namespace: lidm
   files:
-    - values.yaml=./values/lidm-values.yaml
+    - values.yaml=clusters/kubernetes-admin@kubernetes/apps/values/lidm-values.yaml
   options:
     disableNameSuffixHash: true
