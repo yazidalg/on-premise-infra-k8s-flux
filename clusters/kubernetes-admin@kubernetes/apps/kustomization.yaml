@@ -8,6 +8,7 @@ kind: Kustomization
 resources:
   - git-repository.yaml
   - lidm/release.yaml
+  - lidm/namespace.yaml
 
 configMapGenerator:
   - name: lidm-values
