@@ -7,10 +7,23 @@ kind: Kustomization
 
 resources:
   - git-repository.yaml
+
+  # LIDM Values
   - lidm/release.yaml
   - lidm/namespace.yaml
 
+  # API Eventeens Values
+  - api-eventeens/release.yaml
+  - api-eventeens/namespace.yaml
+
 configMapGenerator:
+  - name: api-eventeens-values
+    namespace: lidm
+    files:
+      - values.yaml=values/api-eventeens-values.yaml
+    options:
+      disableNameSuffixHash: true
+
   - name: lidm-values
     namespace: lidm
     files:
