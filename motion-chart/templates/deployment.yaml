@@ -48,6 +48,9 @@ spec:
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
+          envFrom:
+            - configMapRef:
+                name: {{ .containers.envFrom.configMapRef }}
           {{- end }}
       {{- with .Values.volumes }}
       volumes:
