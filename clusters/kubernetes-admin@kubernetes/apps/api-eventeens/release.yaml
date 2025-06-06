@@ -13,9 +13,9 @@ spec:
         kind: GitRepository
         name: flux-system
         namespace: flux-system
-      interval: 1m # Seberapa sering mengecek update chart dari source
+      interval: 1m
   timeout: 10m
   valuesFrom:
     - kind: ConfigMap
-      name: api-eventeens-values # Nama ConfigMap yang dibuat Kustomize
+      name: api-eventeens-values
       valuesKey: values.yaml

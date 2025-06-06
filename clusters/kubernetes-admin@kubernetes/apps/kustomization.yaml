@@ -18,7 +18,7 @@ resources:
 
 configMapGenerator:
   - name: api-eventeens-values
-    namespace: lidm
+    namespace: api-eventeens
     files:
       - values.yaml=values/api-eventeens-values.yaml
     options:
