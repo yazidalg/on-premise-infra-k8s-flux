@@ -4,9 +4,9 @@ metadata:
   name: lidm-api
   namespace: lidm
 spec:
-  interval: 5m
+  interval: 1m
   install:
-    timeout: 10m
+    timeout: 5m
   chart:
     spec:
       chart: motion-chart
