@@ -3,18 +3,16 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # Namespace default untuk resource yang dibuat di sini jika tidak ditentukan secara eksplisit di resource itu sendiri
-# namespace: default 
+# namespace: default
 
 resources:
   - git-repository.yaml
-  - lidm/namespace.yaml
   - lidm/release.yaml
-  # Tambahkan referensi ke HelmRelease instans lain di sini
 
 configMapGenerator:
-- name: lidm-values
-  namespace: lidm
-  files:
-    - values.yaml=values/lidm-values.yaml
-  options:
-    disableNameSuffixHash: true
+  - name: lidm-values
+    namespace: lidm
+    files:
+      - values.yaml=values/lidm-values.yaml
+    options:
+      disableNameSuffixHash: true

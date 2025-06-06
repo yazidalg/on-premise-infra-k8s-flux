@@ -5,8 +5,6 @@ metadata:
   namespace: lidm
 spec:
   interval: 1m
-  install:
-    timeout: 5m
   chart:
     spec:
       chart: "./motion-chart"
@@ -16,6 +14,7 @@ spec:
         name: flux-system
         namespace: flux-system
       interval: 1m # Seberapa sering mengecek update chart dari source
+  timeout: 10m
   valuesFrom:
     - kind: ConfigMap
       name: lidm-values # Nama ConfigMap yang dibuat Kustomize
