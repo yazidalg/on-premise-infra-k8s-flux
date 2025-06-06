@@ -9,8 +9,8 @@ spec:
     timeout: 5m
   chart:
     spec:
-      chart: motion-chart
-      path: "./motion-chart"
+      chart: "./motion-chart"
+      version: "0.1.0"
       sourceRef:
         kind: GitRepository
         name: flux-system
