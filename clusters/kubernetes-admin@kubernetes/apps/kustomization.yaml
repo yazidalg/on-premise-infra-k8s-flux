@@ -6,15 +6,15 @@ kind: Kustomization
 # namespace: default 
 
 resources:
-  - ./git-repository.yaml
-  - ./lidm/namespace.yaml
-  - ./lidm/release.yaml
+  - git-repository.yaml
+  - lidm/namespace.yaml
+  - lidm/release.yaml
   # Tambahkan referensi ke HelmRelease instans lain di sini
 
 configMapGenerator:
 - name: lidm-values
   namespace: lidm
   files:
-    - values.yaml=clusters/kubernetes-admin@kubernetes/apps/values/lidm-values.yaml
+    - values.yaml=values/lidm-values.yaml
   options:
     disableNameSuffixHash: true
