@@ -50,7 +50,7 @@ spec:
             {{- toYaml . | nindent 12 }}
           envFrom:
             - configMapRef:
-                name: {{ .containers.envFrom.configMapRef }}
+                name: {{ .Values.envFrom.configMapRef }}
           {{- end }}
       {{- with .Values.volumes }}
       volumes:
