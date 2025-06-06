@@ -10,6 +10,7 @@ spec:
   chart:
     spec:
       chart: motion-chart
+      path: "./motion-chart"
       sourceRef:
         kind: GitRepository
         name: flux-system
