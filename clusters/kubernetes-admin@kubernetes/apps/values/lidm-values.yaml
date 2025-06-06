@@ -9,7 +9,7 @@ replicaCount: 1
 image:
   repository: 211104/lidm-api
   # This sets the pull policy for images.
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v0.0.1"
 
